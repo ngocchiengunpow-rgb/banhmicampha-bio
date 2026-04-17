@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ngọc Chiến | Bánh Mì Cẩm Phả</title>
+    <meta name="description" content="Trang thông tin tổng hợp của Ngọc Chiến - Bánh Mì Cẩm Phả">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Google Fonts: 'Be Vietnam Pro' for full VN support -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Phosphor Icons for modern light icons -->
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+</head>
+<body>
+    <!-- Background overlay for nice subtle gradients -->
+    <div class="bg-gradient"></div>
+
+    <div class="container animate-fade-in-up">
+        <!-- Profile Section -->
+        <header class="profile">
+            <div class="avatar-container">
+                <img src="logo.png" alt="Bánh Mì Cẩm Phả Logo" class="avatar" />
+            </div>
+            <h1 class="name">Nguyễn Ngọc Chiến</h1>
+            <p class="bio">Founder Bánh Mì Cẩm Phả | Vibecoder | Sinh viên VMU</p>
+        </header>
+
+        <div class="main-content">
+            <!-- Main Links Group -->
+            <main class="links-grid">
+            <!-- Download Extention -->
+            <a href="BanhMiCamPha-Studocu.zip" download class="link-card extension-dl highlight-link">
+                <div class="link-icon-wrapper"><i class="ph ph-download-simple link-icon"></i></div>
+                <span class="link-text">Tải Extension STUDOCU - BMCP</span>
+            </a>
+
+            <!-- Facebook Profile -->
+            <a href="https://www.facebook.com/ngocchiengunpow/" target="_blank" rel="noopener noreferrer" class="link-card fb">
+                <div class="link-icon-wrapper"><i class="ph ph-facebook-logo link-icon"></i></div>
+                <span class="link-text">Facebook Cá Nhân</span>
+            </a>
+
+            <!-- Facebook Fanpage -->
+            <a href="https://www.facebook.com/profile.php?id=61570785212263" target="_blank" rel="noopener noreferrer" class="link-card fb-page">
+                <div class="link-icon-wrapper"><i class="ph ph-flag link-icon"></i></div>
+                <span class="link-text">Fanpage Bánh Mì Cẩm Phả</span>
+            </a>
+
+            <!-- Instagram -->
+            <a href="https://www.instagram.com/bami.cam_pha/" target="_blank" rel="noopener noreferrer" class="link-card insta">
+                <div class="link-icon-wrapper"><i class="ph ph-instagram-logo link-icon"></i></div>
+                <span class="link-text">Instagram</span>
+            </a>
+
+            <!-- TikTok -->
+            <a href="https://www.tiktok.com/@ngocchien5170?lang=vi-VN" target="_blank" rel="noopener noreferrer" class="link-card tiktok">
+                <div class="link-icon-wrapper"><i class="ph ph-tiktok-logo link-icon"></i></div>
+                <span class="link-text">Tiktok Bánh Mì Cẩm Phả</span>
+            </a>
+
+            <!-- NGL Link -->
+            <a href="https://ngl.link/ngocchien517010864" target="_blank" rel="noopener noreferrer" class="link-card ngl-link">
+                <div class="link-icon-wrapper"><i class="ph ph-chat-circle-text link-icon"></i></div>
+                <div class="link-text-group">
+                    <span class="link-text">Gửi tin nhắn ẩn danh</span>
+                    <span class="link-subtext">Hỏi mình bất cứ điều gì (NGL)</span>
+                </div>
+            </a>
+
+            <!-- Shopee Affiliate Placeholder -->
+            <a href="#" target="_blank" rel="noopener noreferrer" class="link-card shopee">
+                <div class="link-icon-wrapper"><i class="ph ph-shopping-bag link-icon"></i></div>
+                <span class="link-text">Shopee Affiliate Của Mình</span>
+            </a>
+            
+            <!-- Email -->
+            <a href="#" id="email-link" class="link-card email">
+                <div class="link-icon-wrapper"><i class="ph ph-envelope-simple link-icon"></i></div>
+                <span class="link-text">ngocchien5170@gmail.com</span>
+            </a>
+        </main>
+
+        <!-- Buy me a coffee section -->
+        <section class="support-section">
+            <div class="support-header">
+                <i class="ph ph-coffee"></i>
+                <h2>Buy me a coffee</h2>
+            </div>
+            <div class="bank-card" id="bank-card">
+                <div class="bank-info">
+                    <span class="bank-name">HDBANK</span>
+                    <span class="account-name">NGUYEN NGOC CHIEN</span>
+                    <span class="account-number" id="account-number">291704070007289</span>
+                </div>
+                <div class="bank-actions">
+                    <button class="qr-btn" id="qr-btn" aria-label="Xem mã QR">
+                        <i class="ph ph-qr-code"></i>
+                        <span class="copy-tooltip">Mã QR</span>
+                    </button>
+                    <button class="copy-btn" id="copy-btn" aria-label="Sao chép số tài khoản">
+                        <i class="ph ph-copy"></i>
+                        <span class="copy-tooltip">Đã chép!</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- QR Code Modal -->
+        <div class="qr-modal" id="qr-modal">
+            <div class="qr-modal-content">
+                <button class="close-modal" id="close-modal"><i class="ph ph-x"></i></button>
+                <h3>Quét mã QR để ủng hộ</h3>
+                <!-- Sử dụng API VietQR để tự tạo mã QR từ stk -->
+                <img src="https://img.vietqr.io/image/HDBANK-291704070007289-compact2.png" alt="Mã QR HDBank" class="qr-image" />
+                <p>Cảm ơn bạn rất nhiều! 🥖</p>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2026 Bánh Mì Cẩm Phả - Design with <i class="ph-fill ph-heart" style="color: #ffb347;"></i></p>
+        </footer>
+        </div> <!-- End of main-content -->
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
