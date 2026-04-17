@@ -87,4 +87,60 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Failed to copy email: ', err);
         }
     });
+
+    // Share section functionality
+    const shareUrl = "https://tinyurl.com/banhmicampha";
+    
+    // Copy Share Link
+    const shareCopyBtn = document.getElementById('share-copy-btn');
+    shareCopyBtn.addEventListener('click', async () => {
+        try {
+            await navigator.clipboard.writeText(shareUrl);
+            const icon = shareCopyBtn.querySelector('i');
+            const originalIconClass = icon.className;
+            icon.className = 'ph ph-check-circle';
+            setTimeout(() => {
+                icon.className = originalIconClass;
+            }, 2000);
+        } catch (err) {
+            console.error('Failed to copy share link: ', err);
+        }
+    });
+
+    // Native Share API
+    const shareNativeBtn = document.getElementById('share-native-btn');
+    shareNativeBtn.addEventListener('click', async () => {
+        if (navigator.share) {
+            try {
+                await navigator.share({
+                    title: 'Bánh Mì Cẩm Phả',
+                    text: 'Ghé thăm trang Web tiện ích và mạng xã hội của Bánh Mì Cẩm Phả nhé!',
+                    url: shareUrl
+                });
+            } catch (err) {
+                console.error('Lỗi chia sẻ: ', err);
+            }
+        } else {
+            alert("Trình duyệt của bạn không hỗ trợ tính năng chia sẻ. Hãy dùng nút Copy Link nhé!");
+        }
+    });
+
+    // Share QR Modal
+    const shareQrBtn = document.getElementById('share-qr-btn');
+    const shareQrModal = document.getElementById('share-qr-modal');
+    const closeShareModal = document.getElementById('close-share-modal');
+
+    shareQrBtn.addEventListener('click', () => {
+        shareQrModal.classList.add('active');
+    });
+
+    closeShareModal.addEventListener('click', () => {
+        shareQrModal.classList.remove('active');
+    });
+
+    window.addEventListener('click', (e) => {
+        if (e.target === shareQrModal) {
+            shareQrModal.classList.remove('active');
+        }
+    });
 });

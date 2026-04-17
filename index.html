@@ -105,16 +105,47 @@
                     </button>
                 </div>
             </div>
+            <div class="support-title" style="margin-top: 24px;">
+                <i class="ph-fill ph-share-network"></i> Giới thiệu trang web
+            </div>
+            <!-- Share Card using same styling as bank card -->
+            <div class="bank-card">
+                <div class="bank-info">
+                    <span class="bank-label">LINK NGẮN</span>
+                    <span class="bank-label" style="font-weight: 400; font-size: 0.8rem; margin-top: -2px;">TIỆN ÍCH STUDOCU BMCP</span>
+                    <span class="bank-number">tinyurl.com/banhmicampha</span>
+                </div>
+                <div class="bank-actions">
+                    <button class="bank-btn" id="share-qr-btn" title="Xem mã QR">
+                        <i class="ph ph-qr-code"></i>
+                    </button>
+                    <button class="bank-btn" id="share-copy-btn" title="Copy Link">
+                        <i class="ph ph-copy"></i>
+                    </button>
+                    <button class="bank-btn" id="share-native-btn" title="Chia sẻ...">
+                        <i class="ph ph-export"></i>
+                    </button>
+                </div>
+            </div>
         </section>
 
-        <!-- QR Code Modal -->
+        <!-- QR Code Modal (Bank) -->
         <div class="qr-modal" id="qr-modal">
             <div class="qr-modal-content">
                 <button class="close-modal" id="close-modal"><i class="ph ph-x"></i></button>
                 <h3>Quét mã QR để ủng hộ</h3>
-                <!-- Sử dụng API VietQR để tự tạo mã QR từ stk -->
-                <img src="https://img.vietqr.io/image/HDBANK-291704070007289-compact2.png" alt="Mã QR HDBank" class="qr-image" />
+                <img src="https://img.vietqr.io/image/HDBANK-291704070007289-compact.png" alt="Mã QR HDBank" class="qr-image" />
                 <p>Cảm ơn bạn rất nhiều! 🥖</p>
+            </div>
+        </div>
+
+        <!-- QR Code Modal (Share) -->
+        <div class="qr-modal" id="share-qr-modal">
+            <div class="qr-modal-content">
+                <button class="close-modal" id="close-share-modal"><i class="ph ph-x"></i></button>
+                <h3>Mã QR Trang Web</h3>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://tinyurl.com/banhmicampha" alt="Mã QR Share Link" class="qr-image" />
+                <p>Quét để truy cập ngay! ✨</p>
             </div>
         </div>
 
