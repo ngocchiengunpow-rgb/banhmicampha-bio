@@ -537,41 +537,32 @@ footer p {
     .bank-card {
         flex-direction: column;
         align-items: flex-start;
-        gap: 20px;
-        position: relative;
+        gap: 16px;
+        padding: 20px;
     }
-    
-    .bank-actions {
-        position: absolute;
-        bottom: 24px;
-        top: auto;
-        right: 24px;
-    }
-}
 
-@media (max-width: 480px) {
-    .container {
-        padding: 40px 20px;
-        max-width: 100%;
+    .account-number {
+        font-size: 1.3rem;
+        word-break: break-all;
     }
-    
-    .name { font-size: 1.7rem; }
-    
-    .link-card { padding: 16px 20px; }
-    .link-icon-wrapper { width: 44px; height: 44px; margin-right: 16px; }
-    .link-icon { font-size: 24px; }
-    
-    .bank-card {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 20px;
-        position: relative;
+
+    .bank-number {
+        font-size: 1.2rem;
+        word-break: break-all;
     }
     
     .bank-actions {
-        position: absolute;
-        bottom: 24px;
-        top: auto;
-        right: 24px;
+        position: relative;
+        bottom: auto;
+        right: auto;
+        width: 100%;
+        justify-content: flex-end;
+        padding-top: 4px;
+    }
+    
+    .copy-btn, .qr-btn, .bank-btn {
+        width: 44px;
+        height: 44px;
+        font-size: 20px;
     }
 }
