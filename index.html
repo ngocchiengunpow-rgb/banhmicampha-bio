@@ -17,6 +17,22 @@
     <!-- Background overlay for nice subtle gradients -->
     <div class="bg-gradient"></div>
 
+    <!-- Language Switcher -->
+    <div class="language-switcher">
+        <button class="lang-btn" id="lang-btn" aria-label="Select Language">
+            <i class="ph ph-translate"></i>
+            <span id="current-lang">🇻🇳 Tiếng Việt</span>
+            <i class="ph ph-caret-down"></i>
+        </button>
+        <div class="lang-dropdown" id="lang-dropdown">
+            <button class="lang-option active" data-lang="vi">🇻🇳 Tiếng Việt</button>
+            <button class="lang-option" data-lang="en">🇺🇸 English</button>
+            <button class="lang-option" data-lang="es">🇪🇸 Español</button>
+            <button class="lang-option" data-lang="id">🇮🇩 Indonesia</button>
+            <button class="lang-option" data-lang="pt">🇵🇹 Português</button>
+        </div>
+    </div>
+
     <div class="container animate-fade-in-up">
         <!-- Profile Section -->
         <header class="profile">
@@ -24,7 +40,7 @@
                 <img src="logo.png" alt="Bánh Mì Cẩm Phả Logo" class="avatar" />
             </div>
             <h1 class="name">Nguyễn Ngọc Chiến</h1>
-            <p class="bio">Founder Bánh Mì Cẩm Phả | Vibecoder | Sinh viên VMU</p>
+            <p class="bio" data-i18n="bio">Founder Bánh Mì Cẩm Phả | Vibecoder | Sinh viên VMU</p>
         </header>
 
         <div class="main-content">
@@ -33,19 +49,19 @@
             <!-- Download Extention -->
             <a href="https://chromewebstore.google.com/detail/hakfedklifkcbkjakhdaebokggdcnagf?utm_source=item-share-cb" target="_blank" rel="noopener noreferrer" class="link-card extension-dl highlight-link">
                 <div class="link-icon-wrapper"><i class="ph ph-download-simple link-icon"></i></div>
-                <span class="link-text">Tải Extension STUDOCU - BMCP</span>
+                <span class="link-text" data-i18n="link-ext">Tải Extension STUDOCU - BMCP</span>
             </a>
 
             <!-- Facebook Profile -->
             <a href="https://www.facebook.com/ngocchiengunpow/" target="_blank" rel="noopener noreferrer" class="link-card fb">
                 <div class="link-icon-wrapper"><i class="ph ph-facebook-logo link-icon"></i></div>
-                <span class="link-text">Facebook Cá Nhân</span>
+                <span class="link-text" data-i18n="link-fb">Facebook Cá Nhân</span>
             </a>
 
             <!-- Facebook Fanpage -->
             <a href="https://www.facebook.com/profile.php?id=61570785212263" target="_blank" rel="noopener noreferrer" class="link-card fb-page">
                 <div class="link-icon-wrapper"><i class="ph ph-flag link-icon"></i></div>
-                <span class="link-text">Fanpage Bánh Mì Cẩm Phả</span>
+                <span class="link-text" data-i18n="link-fanpage">Fanpage Bánh Mì Cẩm Phả</span>
             </a>
 
             <!-- Instagram -->
@@ -57,22 +73,22 @@
             <!-- TikTok -->
             <a href="https://www.tiktok.com/@ngocchien5170?lang=vi-VN" target="_blank" rel="noopener noreferrer" class="link-card tiktok">
                 <div class="link-icon-wrapper"><i class="ph ph-tiktok-logo link-icon"></i></div>
-                <span class="link-text">Tiktok Bánh Mì Cẩm Phả</span>
+                <span class="link-text" data-i18n="link-tiktok">Tiktok Bánh Mì Cẩm Phả</span>
             </a>
 
             <!-- NGL Link -->
             <a href="https://ngl.link/ngocchien517010864" target="_blank" rel="noopener noreferrer" class="link-card ngl-link">
                 <div class="link-icon-wrapper"><i class="ph ph-chat-circle-text link-icon"></i></div>
                 <div class="link-text-group">
-                    <span class="link-text">Gửi tin nhắn ẩn danh</span>
-                    <span class="link-subtext">Hỏi mình bất cứ điều gì (NGL)</span>
+                    <span class="link-text" data-i18n="link-ngl-title">Gửi tin nhắn ẩn danh</span>
+                    <span class="link-subtext" data-i18n="link-ngl-sub">Hỏi mình bất cứ điều gì (NGL)</span>
                 </div>
             </a>
 
             <!-- Shopee Affiliate Placeholder -->
             <a href="#" target="_blank" rel="noopener noreferrer" class="link-card shopee">
                 <div class="link-icon-wrapper"><i class="ph ph-shopping-bag link-icon"></i></div>
-                <span class="link-text">Shopee Affiliate Của Mình</span>
+                <span class="link-text" data-i18n="link-shopee">Shopee Affiliate Của Mình</span>
             </a>
             
             <!-- Email -->
@@ -86,8 +102,9 @@
         <section class="support-section">
             <div class="support-header">
                 <i class="ph ph-coffee"></i>
-                <h2>Buy me a coffee</h2>
+                <h2 data-i18n="support-title">Buy me a coffee</h2>
             </div>
+            <!-- HDBank Card -->
             <div class="bank-card" id="bank-card">
                 <div class="bank-info">
                     <span class="bank-name">HDBANK</span>
@@ -97,22 +114,37 @@
                 <div class="bank-actions">
                     <button class="qr-btn" id="qr-btn" aria-label="Xem mã QR">
                         <i class="ph ph-qr-code"></i>
-                        <span class="copy-tooltip">Mã QR</span>
+                        <span class="copy-tooltip" data-i18n="tooltip-qr">Mã QR</span>
                     </button>
                     <button class="copy-btn" id="copy-btn" aria-label="Sao chép số tài khoản">
                         <i class="ph ph-copy"></i>
-                        <span class="copy-tooltip">Đã chép!</span>
+                        <span class="copy-tooltip" data-i18n="tooltip-copied">Đã chép!</span>
                     </button>
                 </div>
             </div>
+
+            <!-- PayPal Card -->
+            <div class="bank-card" id="paypal-card">
+                <div class="bank-info">
+                    <span class="bank-name" style="color: #003087; display: flex; align-items: center; gap: 6px;"><i class="ph ph-paypal-logo"></i> PAYPAL</span>
+                    <span class="account-name" data-i18n="paypal-sub">Ủng hộ qua PayPal</span>
+                    <span class="account-number" style="font-size: 1.15rem; font-weight: 600; letter-spacing: 0;">paypal.me/bamicampha</span>
+                </div>
+                <div class="bank-actions">
+                    <a href="https://www.paypal.com/paypalme/bamicampha" target="_blank" rel="noopener noreferrer" class="copy-btn" style="text-decoration: none; color: #003087;" aria-label="Đến trang PayPal">
+                        <i class="ph ph-arrow-square-out"></i>
+                    </a>
+                </div>
+            </div>
+
             <div class="support-title" style="margin-top: 24px;">
-                <i class="ph-fill ph-share-network"></i> Giới thiệu trang web
+                <i class="ph-fill ph-share-network"></i> <span data-i18n="share-title-text">Giới thiệu trang web</span>
             </div>
             <!-- Share Card using same styling as bank card -->
             <div class="bank-card">
                 <div class="bank-info">
-                    <span class="bank-label">LINK NGẮN</span>
-                    <span class="bank-label" style="font-weight: 400; font-size: 0.8rem; margin-top: -2px;">TIỆN ÍCH STUDOCU BMCP</span>
+                    <span class="bank-label" data-i18n="share-link-label">LINK NGẮN</span>
+                    <span class="bank-label" data-i18n="share-sub-label" style="font-weight: 400; font-size: 0.8rem; margin-top: -2px;">TIỆN ÍCH STUDOCU BMCP</span>
                     <span class="bank-number">tinyurl.com/banhmicampha</span>
                 </div>
                 <div class="bank-actions">
@@ -133,9 +165,9 @@
         <div class="qr-modal" id="qr-modal">
             <div class="qr-modal-content">
                 <button class="close-modal" id="close-modal"><i class="ph ph-x"></i></button>
-                <h3>Quét mã QR để ủng hộ</h3>
+                <h3 data-i18n="bank-modal-title">Quét mã QR để ủng hộ</h3>
                 <img src="https://img.vietqr.io/image/HDBANK-291704070007289-compact.png" alt="Mã QR HDBank" class="qr-image" />
-                <p>Cảm ơn bạn rất nhiều! 🥖</p>
+                <p data-i18n="bank-modal-thanks">Cảm ơn bạn rất nhiều! 🥖</p>
             </div>
         </div>
 
@@ -143,9 +175,9 @@
         <div class="qr-modal" id="share-qr-modal">
             <div class="qr-modal-content">
                 <button class="close-modal" id="close-share-modal"><i class="ph ph-x"></i></button>
-                <h3>Mã QR Trang Web</h3>
+                <h3 data-i18n="share-modal-title">Mã QR Trang Web</h3>
                 <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://tinyurl.com/banhmicampha" alt="Mã QR Share Link" class="qr-image" />
-                <p>Quét để truy cập ngay! ✨</p>
+                <p data-i18n="share-modal-text">Quét để truy cập ngay! ✨</p>
             </div>
         </div>
 
