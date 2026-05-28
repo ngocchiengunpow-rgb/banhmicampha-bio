@@ -2,7 +2,7 @@ const translations = {
     vi: {
         title: "Ngọc Chiến | Bánh Mì Cẩm Phả",
         bio: "Founder Bánh Mì Cẩm Phả | Vibecoder | Sinh viên VMU",
-        "link-ext": "Tải Extension Studocu Scribd SlideShare Downloader",
+        "link-ext": "Cài đặt extension Bánh Mì Cẩm Phả - Studocu Scribd SlideShare Downloader",
         "link-fb": "Facebook Cá Nhân",
         "link-fanpage": "Fanpage Bánh Mì Cẩm Phả",
         "link-tiktok": "Tiktok Bánh Mì Cẩm Phả",
@@ -29,7 +29,7 @@ const translations = {
     en: {
         title: "Ngọc Chiến | DocuBami",
         bio: "Founder of DocuBami | Vibecoder | VMU Student",
-        "link-ext": "Download Studocu Scribd SlideShare Downloader",
+        "link-ext": "Install Extension DocuBami - Studocu Scribd SlideShare Downloader",
         "link-fb": "Personal Facebook",
         "link-fanpage": "DocuBami Fanpage",
         "link-tiktok": "DocuBami TikTok",
@@ -56,7 +56,7 @@ const translations = {
     es: {
         title: "Ngọc Chiến | DocuBami",
         bio: "Fundador de DocuBami | Vibecoder | Estudiante de VMU",
-        "link-ext": "Descargar Extensión Studocu Scribd SlideShare Downloader",
+        "link-ext": "Instalar Extensión DocuBami - Studocu Scribd SlideShare Downloader",
         "link-fb": "Facebook Personal",
         "link-fanpage": "Página de Facebook DocuBami",
         "link-tiktok": "DocuBami TikTok",
@@ -83,7 +83,7 @@ const translations = {
     id: {
         title: "Ngọc Chiến | DocuBami",
         bio: "Pendiri DocuBami | Vibecoder | Mahasiswa VMU",
-        "link-ext": "Unduh Ekstensi Studocu Scribd SlideShare Downloader",
+        "link-ext": "Instal Ekstensi DocuBami - Studocu Scribd SlideShare Downloader",
         "link-fb": "Facebook Pribadi",
         "link-fanpage": "Halaman Fanpage DocuBami",
         "link-tiktok": "DocuBami TikTok",
@@ -110,7 +110,7 @@ const translations = {
     pt: {
         title: "Ngọc Chiến | DocuBami",
         bio: "Fundador do DocuBami | Vibecoder | Estudante da VMU",
-        "link-ext": "Baixar Extensão Studocu Scribd SlideShare Downloader",
+        "link-ext": "Instalar Extensão DocuBami - Studocu Scribd SlideShare Downloader",
         "link-fb": "Facebook Pessoal",
         "link-fanpage": "Fanpage do DocuBami",
         "link-tiktok": "DocuBami TikTok",
